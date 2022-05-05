@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/css/ol.css" type="text/css">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/build/ol.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+<!--        <script type="text/javascript">-->
+<!--            $( '.dropdown-toggle' ).on( 'click touchstart', function(){-->
+<!--              $( '.dropdown-menu' ).toggleClass( 'dropdown-menu-open' );-->
+<!--            });-->
+<!--        </script>-->
+        <title>Orchard scan</title>
+    </head>
+
+    <body>
+        <div id="view_1">
+            <div id="map" class="map">
+                <div id="info"></div>
+
+                <div id="controls">
+
+                    <div class="drop-section">
+    <!--                    <label for="count-class">Color based on</label>-->
+                        <select id="count-class">
+                            <option value="flower">Flowers</option>
+                            <option value="kiwi">Kiwifruit</option>
+                            <option value="fruitlet">Fruitlet</option>
+                        </select>
+                    </div>
+
+                    <div class="drop-section">
+                        <div class="dropdown">
+                            <div id="colors" class="dropdown-menu"></div>
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Color &#x25BC
+                                <span class="caret"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="preview2">
+    <!--                <div class="row">-->
+                        <div id="bay_title_table" class="text_table">
+                            <div class="text_table_row">
+                                <div id="bay_title_block" class="text_table_cell left"></div>
+                                <div id="bay_title_rowbay" class="text_table_cell right"></div>
+                            </div>
+                        </div>
+        <!--                <div id="bay_title_start" class="bay_title"></div>-->
+        <!--                <div id="bay_title_end" class="bay_title"></div>-->
+<!--                        <a id="bay_image_link" href="#" target="_blank">-->
+<!--                            <img id="bay_image" width="100%" height="auto" alt="bay image" src="#"/>-->
+<!--                        </a>-->
+                        <div id="bay_image_link" href="#" target="_blank">
+                            <img id="bay_image" width="100%" height="auto" alt="bay image" src="#"/>
+                        </div>
+        <!--                <div id="preview_info"></div>-->
+                        <div id="preview_table" class="text_table">
+                            <div class="text_table_row">
+                                <div id="preview_table_count" class="text_table_cell left"></div>
+                                <div id="preview_table_details" class="text_table_cell right">
+                                    <div id="preview_table_details_1"></div>
+                                    <div id="preview_table_details_2"></div>
+                                    <div id="preview_table_details_3"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="text" id="notes"/>
+    <!--                </div>-->
+                    <div class="panel_expand">
+                        	&#11166
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="view_2" style="display: none;">
+            <div class="flex-row">
+
+            </div>
+
+            <div class="columns">
+                <ul id="scan-list">
+                    <li class="scan-list-item active">
+                        <span class="icon-fruit"></span>
+                        Fruit
+                        <span class="aligned-right">25 March 21</span>
+                    </li>
+                    <li class="scan-list-item">
+                        <span class="icon-fruit"></span>
+                        Fruit
+                        <span class="aligned-right">25 March 21</span>
+                    </li>
+                    <li class="scan-list-item">
+                        <span class="icon-fruit"></span>
+                        Fruit
+                        <span class="aligned-right">25 March 21</span>
+                    </li>
+                </ul>
+<!--                <select id="scan options">-->
+<!--                    <option value="flower">Flowers</option>-->
+<!--                    <option value="kiwi">Kiwifruit</option>-->
+<!--                    <option value="fruitlet">Fruitlet</option>-->
+<!--                </select>-->
+                <a id="bay_image_link_2" href="#" target="_blank">
+                    <img id="bay_image_2" width="100%" height="auto" alt="bay image" src="#"/>
+                </a>
+                <div id="details-col">
+                    <div class="col-item map_title">
+                        <div class="minimap"></div>
+                        <span class="title">Roma: Row 7, Bay 25</span>
+                        <hr>
+                    </div>
+                    <div class="col-item scan_details">
+                        <span style="place-self: center; font-weight: bold; font-size: 1.2em; color: var(--dgreen);">46.5/m^2</span>
+                        <span>
+                            <span class="icon-fruit"></span>
+                            1690
+                        </span>
+                        <span>
+                            <span class="icon-area"></span>
+                            19.9m2
+                        </span>
+                        <span>
+                            <span class="icon-pin"></span>
+                            176.42460623, <br> -37.85724637
+                        </span>
+                    </div>
+                    <div class="col-item notes">c</div>
+                </div>
+            </div>
+            <div class="panel_expand">
+                &#11164
+            </div>
+        </div>
+
+
+    </body>
+    <script src="main.js" type="text/javascript"></script>
+
+<!--$( '.dropdown-toggle' ).on( 'click touchstart', function(){-->
+<!--  $( '.dropdown-menu' ).toggleClass( 'dropdown-menu-open' );-->
+<!--});-->
+
+</html>
